@@ -34,10 +34,10 @@ function displayWeather(data) {
 
     const { location, current } = data;
     const weatherHTML = `
-        <h2><i class="fas fa-city"></i> ${location.name}, ${location.country}</h2>
-        <p><i class="fas fa-thermometer-half"></i> Temperature: ${current.temperature} °C</p>
-        <p><i class="fas fa-tint"></i> Humidity: ${current.humidity}%</p>
+        <h2>${location.name}, ${location.country}</h2>
+        <p>Temperature: ${current.temperature} °C</p>
         <p>Weather: ${current.weather_descriptions[0]}</p>
+        <p>Humidity: ${current.humidity}%</p>
     `;
     weatherResult.innerHTML = weatherHTML;
 }
